@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness Track App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        main {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            margin-top: 10px; 
+            border: none;
+            border-radius: 4px;
+            background-color: #222;
+            color: white;
+        }
+
+        button {
+            background-color: #e91e63;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-top: 15px; 
+            width: 100%; 
+            display: block; 
+        }
+
+        button:hover {
+            background-color: #c2185b;
+        }
+
+        .title {
+            margin-bottom: 20px;
+        }
+
+        .welcome-text {
+            font-size: 16px; 
+            margin-bottom: 10px;
+        }
+
+        footer {
+            margin-top: 20px; /* spacing from main container */
+            font-size: 0.8rem;
+            text-align: center;
+            width: 100%;
+        }
+
+        a {
+            color: #e91e63;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="title">
+            <h1>Wellness Track App</h1>
+        </div>
+        
+        <div class="welcome-text">Welcome back</div>
+        
+        <form>
+            <label for="email">Email/User:</label>
+            <input type="text" id="email" name="email" placeholder="Enter your email/user">
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password">
+            
+            <button type="submit" class="small-button">Login</button>
+        
+            <button type="button" onclick="window.location.href='createAccount.html';">Create New Account</button>
+        </form>
+    </main>
+    
+    <footer>
+        &copy; 2024 by <a href="https://www.thesoftwareguild.com/">The Software Guild</a>. All Rights Reserved. Wellness Track App
+    </footer>
+</body>
+</html>

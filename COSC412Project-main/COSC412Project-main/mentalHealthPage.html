@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Tracker</title>
+    <link rel="stylesheet" href="trackingStyles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="nutritionPage.html">Nutrition</a></li>
+                <li><a href="fitnessPage.html">Fitness</a></li>
+                <li><a href="mentalHealthPage.html">Mental</a></li>
+                <li><a href="userProfile.html">Profile</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="calorie-tracker">
+        <div class="mental-health-tracker">
+            <div class="date-selector">
+                <button onclick="changeDate(-1)">&#10094;</button>
+                <span id="current-date">April 29, 2024</span>
+                <button onclick="changeDate(1)">&#10095;</button>
+            </div>
+            <div class="mood-input">
+                <label for="mood"><h2>How are you feeling today?</h2></label>
+                <select id="mood" name="mood">
+                    <option value="happy">Happy</option>
+                    <option value="sad">Sad</option>
+                    <option value="stressed">Stressed</option>
+                    <option value="anxious">Anxious</option>
+                    <option value="content">Content</option>
+                    <option value="angry">Angry</option>
+                    <option value="calm">Calm</option>
+                    <option value="calm">Empty</option>
+                    <!-- Add more mood options as needed -->
+                </select>
+            </div>
+            <div class="mental-health-notes">
+                <label for="mental-health-notes"><h2>Additional Notes</h2></label>
+                <textarea id="mental-health-notes" placeholder="Enter any additional notes about your mental health"></textarea>
+            </div>
+            <button onclick="saveMentalHealthData()">Save</button>
+        </div>
+        <br>
+        <div id="quote-container">
+            <!-- Quote will be displayed here -->
+        </div>
+        </div>
+    </main>
+    <script src="trackingPages.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>

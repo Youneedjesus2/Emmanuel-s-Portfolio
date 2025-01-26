@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two-Step Authentication</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-top: 5px;
+            border: none;
+            border-radius: 4px;
+            background-color: #222;
+            color: white;
+        }
+
+        button {
+            background-color: #e91e63;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #c2185b;
+        }
+
+        a {
+            color: #e91e63;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Two-Step Authentication</h1>
+        <p>We sent a verification link to <span id="userEmail"></span>.</p>
+        <form>
+            <input type="text" id="pinCode" placeholder="Enter 4-digit PIN code">
+            <button type="button" onclick="verifyPin()">Verify Email</button>
+        </form>
+        <p>Didn't receive the email? <a href="#" onclick="resendEmail()">Click to resend</a></p>
+        <a href="loginPage.html">Back to login</a>
+    </div>
+
+    <script>
+        function verifyPin() {
+            var pinCode = document.getElementById("pinCode").value;
+
+            if (pinCode === "1234") {
+                alert("PIN code is correct");
+            } else {
+                alert("PIN code is incorrect");
+            }
+        }
+
+        function resendEmail() {
+            var newPinCode = generatePinCode();
+            sendEmail(newPinCode);
+            var userEmail = document.getElementById("userEmail").textContent;
+            var message = "We sent a new verification link to " + userEmail + ".";
+            alert(message);
+        }
+
+        function generatePinCode() {
+            var pinCode = Math.floor(1000 + Math.random() * 9000);
+            return pinCode.toString();
+        }
+
+        function sendEmail(pinCode) {
+            var userEmail = document.getElementById("userEmail").textContent;
+            var message = "Your verification code is: " + pinCode;
+            alert(message);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition Tracking</title>
+    <link rel="stylesheet" href="trackingStyles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="nutritionPage.html">Nutrition</a></li>
+                <li><a href="fitnessPage.html">Fitness</a></li>
+                <li><a href="mentalHealthPage.html">Mental</a></li>
+                <li><a href="userProfile.html">Profile</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="profile">
+        <img src="C:/Users/adam6/OneDrive/Pictures/profile.jpg" alt="Profile Picture">
+        <h2>@igotogym</h2>
+        <p>
+            <b>Bio:</b> I'm Alex, a dedicated gym-goer who thrives on the variety and challenge of my daily workouts. The gym is my sanctuary for
+             stress relief and mental rejuvenation, thanks to the endorphins that keep me coming back for more. I also cherish the camaraderie and 
+             motivation I find in the community of fellow fitness enthusiasts.
+        </p>
+    </section>
+    <section class="posts">
+        <div class="tabs">
+            <button class="tablink" onclick="openTab(event, 'Posts')">POSTS</button>
+        </div>
+        <div id="Posts" class="tabcontent">
+            <img src="C:\Users\adam6\OneDrive\Pictures\burdick_daytime_m.jpg" alt="Post 1">
+            <img src="C:\Users\adam6\OneDrive\Pictures\gym1.jpg" alt="Post 2">
+            <img src="C:\Users\adam6\OneDrive\Pictures\gym2.jpg" alt="Post 3">
+        </div>
+    </section>
+    <!-- Modal Section -->
+<div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <div class="modal-body">
+        <img class="modal-content" id="img01">
+        <div class="modal-info">
+            <div id="likes"><span id="likes-count">5</span> Likes</div>
+            <div id="caption"></div>
+            <div class="comments">
+                <textarea id="comment-input" placeholder="Add a comment..."></textarea>
+                <button onclick="postComment()">Post</button>
+                <div id="comment-section"></div>
+            </div>
+        </div>
+    </div>
+</div>
+    <footer>
+        <p>© 2024 Well Track</p>
+    </footer>
+    <script src="trackingPages.js"></script>
+</body>
+</html>

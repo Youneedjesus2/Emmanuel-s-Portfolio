@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition Tracking</title>
+    <link rel="stylesheet" href="trackingStyles.css"> <!-- Link to CSS file -->
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="nutritionPage.html">Nutrition</a></li>
+                <li><a href="fitnessPage.html">Fitness</a></li>
+                <li><a href="mentalHealthPage.html">Mental</a></li>
+                <li><a href="userProfile.html">Profile</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="calorie-tracker">
+            <div class="date-selector">
+                <button onclick="changeDate(-1)">&#10094;</button>
+                <span id="current-date">April 29, 2024</span>
+                <button onclick="changeDate(1)">&#10095;</button>
+            </div>
+            <div class="calorie-goal">
+                <p>Burned Calorie Goal: <span id="calorie-goal">200</span></p>
+                <p>Remaining Calories: <span id="remaining-calories">200</span></p>
+            </div>
+            <div class="exercise-inputs">
+                <div class="cardio">
+                    <h2>Cardiovascular</h2>
+                    <input type="text" id="cardio-input" placeholder="Enter Exercise Name">
+                    <br></br>
+                    <input type="text" id="time-input" placeholder="Enter Exercise time">
+                    <br></br>
+                    <button onclick="addExercise('cardio')">Add Exercise</button>
+                    <ul id="cardio-list"></ul>
+                </div>
+                <div class="strength">
+                    <h2>Strength Training</h2>
+                    <input type="text" id="strength-input" placeholder="Enter Exercise Name">
+                    <br></br>
+                    <input type="text" id="sets-input" placeholder="Enter Number of Sets">
+                    <br></br>
+                    <input type="text" id="reps-input" placeholder="Enter Number of Reps">
+                    <br></br>
+                    <input type="text" id="weight-input" placeholder="Enter Amount of Weight">
+                    <br></br>
+                    <button onclick="addExercise('strength')">Add Exercise</button>
+                    <ul id="strength-list"></ul>
+                </div>
+            </div>     
+            <div class ="exercise-notes">
+                <h2 className="notes-title">Todays Exercise Notes</h2>
+                <textarea className="notes-form" id="noteContent" placeholder="notes" required></textarea>
+            </div>       
+        </div>
+    </main>
+    <script src="trackingPages.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>

@@ -1,0 +1,4 @@
+{
+  "filesystem": ["eicar", ".exe", "malware", "ransomware"],
+  "process": ["evil_process", "malicious_command"]
+}

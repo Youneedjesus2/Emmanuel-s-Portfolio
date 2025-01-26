@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Registry</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        .container {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .form-container {
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"],
+        select {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-top: 5px;
+            border: none;
+            border-radius: 4px;
+            background-color: #222;
+            color: white;
+        }
+
+        .submit-btn, .back-button {
+            background-color: #e91e63;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 4px;
+            margin-top: 10px; /* uniform spacing */
+        }
+
+        .submit-btn:hover, .back-button:hover {
+            background-color: #c2185b;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container" id="signupForm">
+            <h1>Create an Account</h1>
+            <form onsubmit="return validateForm()">
+                <div class="input-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" minlength="8" required>
+                </div>
+
+                <button type="submit" class="submit-btn">Sign Up</button>
+                <button type="button" class="back-button" onclick="window.location.href='loginPage.html'">Return to Login Page</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function validateForm() {
+            if (document.getElementById('name').value && document.getElementById('email').value && document.getElementById('password').value.length >= 8) {
+                document.getElementById('signupForm').style.display = 'none';
+                document.getElementById('detailsForm').style.display = 'block';
+            } else {
+                alert('Please fill out the form correctly.');
+            }
+            return false; 
+        }
+    </script>
+</body>
+</html>

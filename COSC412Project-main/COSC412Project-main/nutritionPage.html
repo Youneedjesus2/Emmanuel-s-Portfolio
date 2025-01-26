@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition Tracking</title>
+    <link rel="stylesheet" href="trackingStyles.css"> <!-- Link to CSS file -->
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="nutritionPage.html">Nutrition</a></li>
+                <li><a href="fitnessPage.html">Fitness</a></li>
+                <li><a href="mentalHealthPage.html">Mental</a></li>
+                <li><a href="userProfile.html">Profile</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="calorie-tracker">
+            <div class="date-selector">
+                <button onclick="changeDate(-1)">&#10094;</button>
+                <span id="current-date">April 29, 2024</span>
+                <button onclick="changeDate(1)">&#10095;</button>
+            </div>
+            <div class="calorie-goal">
+                <p>Calorie Goal: <span id="calorie-goal">2500</span></p>
+                <p>Remaining Calories: <span id="remaining-calories">2500</span></p>
+            </div>
+            <div class="meal-inputs">
+                <div class="meal">
+                    <h2>Breakfast</h2>
+                    <input type="text" id="breakfast-input" placeholder="Enter food">
+                    <button onclick="addFood('breakfast')">Add Food</button>
+                    <ul id="breakfast-list"></ul>
+                </div>
+                <div class="meal">
+                    <h2>Lunch</h2>
+                    <input type="text" id="lunch-input" placeholder="Enter food">
+                    <button onclick="addFood('lunch')">Add Food</button>
+                    <ul id="lunch-list"></ul>
+                </div>
+                <div class="meal">
+                    <h2>Dinner</h2>
+                    <input type="text" id="dinner-input" placeholder="Enter food">
+                    <button onclick="addFood('dinner')">Add Food</button>
+                    <ul id="dinner-list"></ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="trackingPages.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>
